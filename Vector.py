@@ -12,12 +12,12 @@ class Vector:
             self.val = []
         else:
             self.val = list(args)
-        self.dim = len(args)
+        self.dim = len(args) or extra
         for i in range(extra):
             self.val.append(0)
             
     def __repr__(self):
-        return 'Vector(' + ', '.join(int_str(self.val)) + ')'
+        return Vector.__name__ + '(' + ', '.join(int_str(self.val)) + ')'
         
     def __str__(self):
         return '<' + ', '.join(int_str(self.val)) + '>'
@@ -69,3 +69,6 @@ class Vector:
     def project(self, other):
         self.__dim__(other)
         return ((self * other) / other.mag() ** 2) * other
+
+    def unit(self):
+        return self * (1 / self.mag())
