@@ -1,8 +1,7 @@
 """Perform chemistry."""
 
-import decimal
 from fractions import Fraction
-
+from .unit import Unit
 
 # --------------- #
 # Utility Objects #
