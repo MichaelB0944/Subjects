@@ -95,4 +95,3 @@ class SolutionUnit:
     X = Unit('X', full_name='Mole Fraction')
     ppm = Unit('ppm', full_name='Parts per Million')
     ppb = Unit('ppb', full_name='Parts per Billion')
-
