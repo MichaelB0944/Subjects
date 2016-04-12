@@ -7,7 +7,9 @@ from decimal import *
 class SigFig:
     """A decimal that follows significant figure rules.
 
-    Attributes:
+    Significant figures are used for determining the reasonable
+    precision to use when performing calculations using measurements.
+
     """
 
     @staticmethod
@@ -29,7 +31,7 @@ class SigFig:
         pass
 
     def __rsub__(self, other):
-        pass
+        return SigFig.__add__(-self, other)
 
     def __mul__(self, other):
         pass
@@ -40,6 +42,9 @@ class SigFig:
         pass
 
     def __rtruediv__(self, other):
+        pass
+
+    def __neg__(self):
         pass
 
     def __pow__(self, power, modulo=None):
